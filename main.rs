@@ -31,7 +31,9 @@ fn sin(angle: f64) -> f64 {
 fn tan(angle: f64) -> f64 {
     angle.tan()
 }
-
+fn cos(angle: f64) -> f64 {
+    angle.,cos()
+}
 fn main() {
     println!("Welcome Stable V1.2");
 
@@ -58,4 +60,7 @@ fn main() {
 
     let tan_value = tan(angle.to_radians());
     println!("tan({}) = {}", angle, tan_value);
+
+    let cos_value = cos(angle.to_radians());
+    println!("cos({}) = {}", angle, cos_value);
 }
