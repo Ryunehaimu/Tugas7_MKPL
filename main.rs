@@ -31,9 +31,43 @@ fn sin(angle: f64) -> f64 {
 fn tan(angle: f64) -> f64 {
     angle.tan()
 }
+fn cos(angle: f64) -> f64 {
+    angle.cos()
+}
+fn to_binary(decimal: u32) -> String {
+    if decimal == 0 {
+        return "0".to_string();
+    }
 
+    let mut result = String::new();
+    let mut num = decimal;
+
+    while num > 0 {
+        let rem = num % 2;
+        result.push_str(&rem.to_string());
+        num /= 2;
+    }
+
+    result.chars().rev().collect()
+}
+fn to_decimal(binary: &str) -> Option<u32> {
+    let mut result = 0;
+    let mut power = 0;
+
+    for bit in binary.chars().rev() {
+        if bit == '1' {
+            result += 2u32.pow(power);
+        } else if bit != '0' {
+            // Karakter selain '0' dan '1' tidak valid dalam representasi biner
+            return None;
+        }
+        power += 1;
+    }
+
+    Some(result)
+}
 fn main() {
-    println!("Welcome Release V1");
+    println!("Welcome Release V1.2");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
@@ -58,4 +92,7 @@ fn main() {
 
     let tan_value = tan(angle.to_radians());
     println!("tan({}) = {}", angle, tan_value);
+
+    let cos_value = cos(angle.to_radians());
+    println!("cos({}) = {}", angle, cos_value);
 }
