@@ -19,7 +19,7 @@ fn modulo_numbers(num1: i32, num2: i32) -> i32 {
 }
 
 fn main() {
-    println!("Hello World");
+    println!("Welcom Stable V1");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
