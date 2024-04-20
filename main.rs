@@ -7,6 +7,9 @@ fn subtract_numbers(num1: i32, num2: i32) -> i32 {
 }
 
 fn divide_numbers(num1: i32, num2: i32) -> i32 {
+    if num2 == 0 {
+        panic!("Cannot divide by zero");
+    }
     num1 / num2
 }
 
@@ -15,6 +18,9 @@ fn multiply_numbers(num1: i32, num2: i32) -> i32 {
 }
 
 fn modulo_numbers(num1: i32, num2: i32) -> i32 {
+    if num2 == 0 {
+        panic!("Cannot modulo by zero");
+    }
     num1 % num2
 }
 
