@@ -23,14 +23,17 @@ fn modulo_numbers(num1: i32, num2: i32) -> i32 {
     }
     num1 % num2
 }
+
 fn sin(angle: f64) -> f64 {
     angle.sin()
 }
+
 fn tan(angle: f64) -> f64 {
     angle.tan()
 }
+
 fn main() {
-    println!("Welcom Stable V1");
+    println!("Welcome Stable V1.2");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
@@ -47,4 +50,12 @@ fn main() {
 
     let remainder = modulo_numbers(17, 5);
     println!("17 % 5 = {}", remainder);
+
+    // Example usage of sin and tan functions
+    let angle = 45.0;
+    let sin_value = sin(angle.to_radians());
+    println!("sin({}) = {}", angle, sin_value);
+
+    let tan_value = tan(angle.to_radians());
+    println!("tan({}) = {}", angle, tan_value);
 }
