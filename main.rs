@@ -34,6 +34,38 @@ fn tan(angle: f64) -> f64 {
 fn cos(angle: f64) -> f64 {
     angle.cos()
 }
+fn to_binary(decimal: u32) -> String {
+    if decimal == 0 {
+        return "0".to_string();
+    }
+
+    let mut result = String::new();
+    let mut num = decimal;
+
+    while num > 0 {
+        let rem = num % 2;
+        result.push_str(&rem.to_string());
+        num /= 2;
+    }
+
+    result.chars().rev().collect()
+}
+fn to_decimal(binary: &str) -> Option<u32> {
+    let mut result = 0;
+    let mut power = 0;
+
+    for bit in binary.chars().rev() {
+        if bit == '1' {
+            result += 2u32.pow(power);
+        } else if bit != '0' {
+            // Karakter selain '0' dan '1' tidak valid dalam representasi biner
+            return None;
+        }
+        power += 1;
+    }
+
+    Some(result)
+}
 fn main() {
     println!("Welcome Stable V1.5");
 
