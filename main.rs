@@ -33,7 +33,7 @@ fn tan(angle: f64) -> f64 {
 }
 
 fn main() {
-    println!("Welcome Stable V1.3");
+    println!("Welcome Release V1");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
