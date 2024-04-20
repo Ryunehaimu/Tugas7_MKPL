@@ -19,6 +19,9 @@ fn sin(angle: f64) -> f64 {
 fn tan(angle: f64) -> f64 {
     angle.tan()
 }
+fn cos(angle: f64) -> f64 {
+    angle.,cos()
+}
 fn main() {
     println!("Hello World");
 }
