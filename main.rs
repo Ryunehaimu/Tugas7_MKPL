@@ -32,7 +32,7 @@ fn tan(angle: f64) -> f64 {
     angle.tan()
 }
 fn cos(angle: f64) -> f64 {
-    angle.,cos()
+    angle.cos()
 }
 fn main() {
     println!("Welcome Stable V1.4");
