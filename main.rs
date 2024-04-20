@@ -50,6 +50,22 @@ fn to_binary(decimal: u32) -> String {
 
     result.chars().rev().collect()
 }
+fn to_decimal(binary: &str) -> Option<u32> {
+    let mut result = 0;
+    let mut power = 0;
+
+    for bit in binary.chars().rev() {
+        if bit == '1' {
+            result += 2u32.pow(power);
+        } else if bit != '0' {
+            // Karakter selain '0' dan '1' tidak valid dalam representasi biner
+            return None;
+        }
+        power += 1;
+    }
+
+    Some(result)
+}
 fn main() {
     println!("Welcome Stable V1.4");
 
