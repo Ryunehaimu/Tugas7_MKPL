@@ -67,7 +67,7 @@ fn to_decimal(binary: &str) -> Option<u32> {
     Some(result)
 }
 fn main() {
-    println!("Welcome Stable V1.5");
+    println!("Welcome Stable V1.6");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
