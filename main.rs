@@ -13,6 +13,9 @@ fn multiple_numbers(num1: i32, num2: i32) -> i32 {
 fn modulo_numbers(num1: i32, num2: i32) -> i32 {
     num1 % num2
 }
+fn sin(angle: f64) -> f64 {
+    angle.sin()
+}
 fn main() {
     println!("Hello World");
 }
