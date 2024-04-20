@@ -35,7 +35,7 @@ fn cos(angle: f64) -> f64 {
     angle.,cos()
 }
 fn main() {
-    println!("Welcome Stable V1.3");
+    println!("Welcome Stable V1.4");
 
     // Example usage of the functions
     let sum = add_numbers(5, 3);
